@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2305F245-DD0A-478A-87FE-62EB086E8CEF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dsccodeccpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include_internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)include_internal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dsc-codec-cpp.cpp" />
+    <ClCompile Include="src\AllShipsCall.cpp" />
+    <ClCompile Include="src\decoder\AllShipsDecoder.cpp" />
+    <ClCompile Include="src\decoder\BitDecoder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\decoder\CodesDecoder.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\decoder\DecoderListener.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\decoder\DistressDecoder.cpp" />
+    <ClCompile Include="src\decoder\DscDecoder.cpp" />
+    <ClCompile Include="src\decoder\GeographicAreaDecoder.cpp" />
+    <ClCompile Include="src\decoder\IndividualDecoder.cpp" />
+    <ClCompile Include="src\decoder\RoutineGroupDecoder.cpp" />
+    <ClCompile Include="src\decoder\SemiAutoDecoder.cpp" />
+    <ClCompile Include="src\DigitalSelectiveCall.cpp" />
+    <ClCompile Include="src\distress\AbstractDistressRelay.cpp" />
+    <ClCompile Include="src\distress\Distress.cpp" />
+    <ClCompile Include="src\distress\DistressAck.cpp" />
+    <ClCompile Include="src\distress\DistressRelay.cpp" />
+    <ClCompile Include="src\distress\DistressRelayAck.cpp" />
+    <ClCompile Include="src\distress\DistressRelayRq.cpp" />
+    <ClCompile Include="src\entities\Area.cpp" />
+    <ClCompile Include="src\entities\Code.cpp">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="src\entities\Coordinates.cpp" />
+    <ClCompile Include="src\entities\DscNumber.cpp" />
+    <ClCompile Include="src\entities\Frequency.cpp" />
+    <ClCompile Include="src\entities\Mmsi.cpp" />
+    <ClCompile Include="src\entities\PstnNumber.cpp" />
+    <ClCompile Include="src\entities\TimeUTC.cpp" />
+    <ClCompile Include="src\GeographicArea.cpp" />
+    <ClCompile Include="src\IndividualCall.cpp" />
+    <ClCompile Include="src\routine\RoutineGroup.cpp" />
+    <ClCompile Include="src\routine\RoutineIndividual.cpp" />
+    <ClCompile Include="src\routine\RoutineIndividualAck.cpp" />
+    <ClCompile Include="src\safety\SafetyAllShips.cpp" />
+    <ClCompile Include="src\safety\SafetyGeographicArea.cpp" />
+    <ClCompile Include="src\safety\SafetyIndividual.cpp" />
+    <ClCompile Include="src\safety\SafetyIndividualAck.cpp" />
+    <ClCompile Include="src\SemiAutoCall.cpp" />
+    <ClCompile Include="src\semiAuto\SemiAutoMfHf.cpp" />
+    <ClCompile Include="src\semiAuto\SemiAutoMfHfAck.cpp" />
+    <ClCompile Include="src\semiAuto\SemiAutoVhf.cpp" />
+    <ClCompile Include="src\semiAuto\SemiAutoVhfAck.cpp" />
+    <ClCompile Include="src\structure\Category.cpp" />
+    <ClCompile Include="src\structure\DistressNature.cpp" />
+    <ClCompile Include="src\structure\ExpansionPosition.cpp" />
+    <ClCompile Include="src\structure\FirstTelecommand.cpp" />
+    <ClCompile Include="src\structure\FormatSpecifier.cpp" />
+    <ClCompile Include="src\structure\Phasing.cpp" />
+    <ClCompile Include="src\structure\SecondTelecommand.cpp" />
+    <ClCompile Include="src\urgency\UrgencyAllShips.cpp" />
+    <ClCompile Include="src\urgency\UrgencyGeographicArea.cpp" />
+    <ClCompile Include="src\urgency\UrgencyIndividual.cpp" />
+    <ClCompile Include="src\urgency\UrgencyIndividualAck.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include_internal\AllShipsCall.h" />
+    <ClInclude Include="include_internal\decoder\AllShipsDecoder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\BitDecoder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\CodesDecoder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\DecoderListener.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\DistressDecoder.h" />
+    <ClInclude Include="include_internal\decoder\DscDecoder.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\GeographicAreaDecoder.h" />
+    <ClInclude Include="include_internal\decoder\IndividualDecoder.h" />
+    <ClInclude Include="include_internal\decoder\RoutineGroupDecoder.h" />
+    <ClInclude Include="include_internal\decoder\SemiAutoDecoder.h" />
+    <ClInclude Include="include_internal\DigitalSelectiveCall.h" />
+    <ClInclude Include="include_internal\distress\AbstractDistressRelay.h" />
+    <ClInclude Include="include_internal\distress\Distress.h" />
+    <ClInclude Include="include_internal\distress\DistressAck.h" />
+    <ClInclude Include="include_internal\distress\DistressRelay.h" />
+    <ClInclude Include="include_internal\distress\DistressRelayAck.h" />
+    <ClInclude Include="include_internal\distress\DistressRelayRq.h" />
+    <ClInclude Include="include_internal\DscMarkers.h" />
+    <ClInclude Include="include_internal\entities\Address.h" />
+    <ClInclude Include="include_internal\entities\Area.h" />
+    <ClInclude Include="include_internal\entities\Code.h" />
+    <ClInclude Include="include_internal\entities\Coordinates.h" />
+    <ClInclude Include="include_internal\entities\DscNumber.h" />
+    <ClInclude Include="include_internal\entities\Frequency.h" />
+    <ClInclude Include="include_internal\entities\Mmsi.h" />
+    <ClInclude Include="include_internal\entities\PstnNumber.h" />
+    <ClInclude Include="include_internal\entities\TimeUTC.h" />
+    <ClInclude Include="include_internal\entities\Transmittable.h" />
+    <ClInclude Include="include_internal\GeographicArea.h" />
+    <ClInclude Include="include_internal\IndividualCall.h" />
+    <ClInclude Include="include_internal\routine\RoutineGroup.h" />
+    <ClInclude Include="include_internal\routine\RoutineIndividual.h" />
+    <ClInclude Include="include_internal\routine\RoutineIndividualAck.h" />
+    <ClInclude Include="include_internal\safety\SafetyAllShips.h" />
+    <ClInclude Include="include_internal\safety\SafetyGeographicArea.h" />
+    <ClInclude Include="include_internal\safety\SafetyIndividual.h" />
+    <ClInclude Include="include_internal\safety\SafetyIndividualAck.h" />
+    <ClInclude Include="include_internal\SemiAutoCall.h" />
+    <ClInclude Include="include_internal\semiAuto\SemiAutoMfHf.h" />
+    <ClInclude Include="include_internal\semiAuto\SemiAutoMfHfAck.h" />
+    <ClInclude Include="include_internal\semiAuto\SemiAutoVhf.h" />
+    <ClInclude Include="include_internal\semiAuto\SemiAutoVhfAck.h" />
+    <ClInclude Include="include_internal\structure\Category.h" />
+    <ClInclude Include="include_internal\structure\DistressNature.h" />
+    <ClInclude Include="include_internal\structure\ExpansionPosition.h" />
+    <ClInclude Include="include_internal\structure\FirstTelecommand.h" />
+    <ClInclude Include="include_internal\structure\FormatSpecifier.h" />
+    <ClInclude Include="include_internal\structure\Phasing.h" />
+    <ClInclude Include="include_internal\structure\PossibleExpansion.h" />
+    <ClInclude Include="include_internal\structure\SecondTelecommand.h" />
+    <ClInclude Include="include_internal\urgency\UrgencyAllShips.h" />
+    <ClInclude Include="include_internal\urgency\UrgencyGeographicArea.h" />
+    <ClInclude Include="include_internal\urgency\UrgencyIndividual.h" />
+    <ClInclude Include="include_internal\urgency\UrgencyIndividualAck.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

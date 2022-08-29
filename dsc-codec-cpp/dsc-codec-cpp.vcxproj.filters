@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\entities">
+      <UniqueIdentifier>{5ca9dbb3-334a-46f2-af7c-9b6416a0bcc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\entities">
+      <UniqueIdentifier>{786a478f-ea23-4f5d-9f8f-88a99a14c8c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\structure">
+      <UniqueIdentifier>{d0310f7a-2083-44a0-bdbf-c2b47b949a89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\structure">
+      <UniqueIdentifier>{0e4db25e-f296-431e-acda-a3971a044f5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\semiAuto">
+      <UniqueIdentifier>{80b41562-ca65-495b-9362-d71f85d65b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\semiAuto">
+      <UniqueIdentifier>{4b2aa489-2fd2-4a8f-8895-c0361173c68e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\urgency">
+      <UniqueIdentifier>{2d66534e-b542-4f3c-abd5-0375d9b52057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\urgency">
+      <UniqueIdentifier>{cd3cc7b7-e419-42b6-83fb-48ee59726514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\safety">
+      <UniqueIdentifier>{c4b7024f-12a2-42bf-9e48-37843422beff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\safety">
+      <UniqueIdentifier>{6bd762f7-62ce-4f8f-b838-1ae1a9893294}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\routine">
+      <UniqueIdentifier>{47916027-35ab-4776-b34b-be1ed6bdd3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\routine">
+      <UniqueIdentifier>{e5f5082f-1c6b-4abc-bdc2-55b361fda968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\distress">
+      <UniqueIdentifier>{56606e19-ed9d-4c0a-89c8-b85ee9d5f284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\distress">
+      <UniqueIdentifier>{72695aab-f25d-44c4-999f-1128f40e1a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\decoder">
+      <UniqueIdentifier>{ef5a4f2d-3c21-4b6a-8f9a-8630bde6a85e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\decoder">
+      <UniqueIdentifier>{7757e7fb-c1fa-4e11-994a-2da199a8ef41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dsc-codec-cpp.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Code.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\Phasing.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Mmsi.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Coordinates.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Area.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\DscNumber.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\Frequency.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\PstnNumber.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\entities\TimeUTC.cpp">
+      <Filter>Исходные файлы\entities</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\Category.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\DistressNature.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\ExpansionPosition.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\FirstTelecommand.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\FormatSpecifier.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\structure\SecondTelecommand.cpp">
+      <Filter>Исходные файлы\structure</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SemiAutoCall.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DigitalSelectiveCall.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AllShipsCall.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GeographicArea.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IndividualCall.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="src\urgency\UrgencyAllShips.cpp">
+      <Filter>Исходные файлы\urgency</Filter>
+    </ClCompile>
+    <ClCompile Include="src\urgency\UrgencyGeographicArea.cpp">
+      <Filter>Исходные файлы\urgency</Filter>
+    </ClCompile>
+    <ClCompile Include="src\urgency\UrgencyIndividual.cpp">
+      <Filter>Исходные файлы\urgency</Filter>
+    </ClCompile>
+    <ClCompile Include="src\urgency\UrgencyIndividualAck.cpp">
+      <Filter>Исходные файлы\urgency</Filter>
+    </ClCompile>
+    <ClCompile Include="src\semiAuto\SemiAutoMfHf.cpp">
+      <Filter>Исходные файлы\semiAuto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\semiAuto\SemiAutoMfHfAck.cpp">
+      <Filter>Исходные файлы\semiAuto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\semiAuto\SemiAutoVhf.cpp">
+      <Filter>Исходные файлы\semiAuto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\semiAuto\SemiAutoVhfAck.cpp">
+      <Filter>Исходные файлы\semiAuto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safety\SafetyAllShips.cpp">
+      <Filter>Исходные файлы\safety</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safety\SafetyGeographicArea.cpp">
+      <Filter>Исходные файлы\safety</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safety\SafetyIndividual.cpp">
+      <Filter>Исходные файлы\safety</Filter>
+    </ClCompile>
+    <ClCompile Include="src\safety\SafetyIndividualAck.cpp">
+      <Filter>Исходные файлы\safety</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routine\RoutineGroup.cpp">
+      <Filter>Исходные файлы\routine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routine\RoutineIndividual.cpp">
+      <Filter>Исходные файлы\routine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\routine\RoutineIndividualAck.cpp">
+      <Filter>Исходные файлы\routine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\AbstractDistressRelay.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\Distress.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\DistressAck.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\DistressRelay.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\DistressRelayAck.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\distress\DistressRelayRq.cpp">
+      <Filter>Исходные файлы\distress</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\AllShipsDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\BitDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\CodesDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\DecoderListener.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\DistressDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\DscDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\GeographicAreaDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\IndividualDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\RoutineGroupDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="src\decoder\SemiAutoDecoder.cpp">
+      <Filter>Исходные файлы\decoder</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include_internal\entities\Code.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\Phasing.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Address.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Transmittable.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Mmsi.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Area.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Coordinates.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\DscNumber.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\Frequency.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\PstnNumber.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\entities\TimeUTC.h">
+      <Filter>Файлы заголовков\entities</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\Category.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\DistressNature.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\ExpansionPosition.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\FirstTelecommand.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\FormatSpecifier.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\PossibleExpansion.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\structure\SecondTelecommand.h">
+      <Filter>Файлы заголовков\structure</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\SemiAutoCall.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\DigitalSelectiveCall.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\DscMarkers.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\AllShipsCall.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\GeographicArea.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\IndividualCall.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\urgency\UrgencyAllShips.h">
+      <Filter>Файлы заголовков\urgency</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\urgency\UrgencyGeographicArea.h">
+      <Filter>Файлы заголовков\urgency</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\urgency\UrgencyIndividual.h">
+      <Filter>Файлы заголовков\urgency</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\urgency\UrgencyIndividualAck.h">
+      <Filter>Файлы заголовков\urgency</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\semiAuto\SemiAutoMfHf.h">
+      <Filter>Файлы заголовков\semiAuto</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\semiAuto\SemiAutoMfHfAck.h">
+      <Filter>Файлы заголовков\semiAuto</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\semiAuto\SemiAutoVhf.h">
+      <Filter>Файлы заголовков\semiAuto</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\semiAuto\SemiAutoVhfAck.h">
+      <Filter>Файлы заголовков\semiAuto</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\safety\SafetyAllShips.h">
+      <Filter>Файлы заголовков\safety</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\safety\SafetyGeographicArea.h">
+      <Filter>Файлы заголовков\safety</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\safety\SafetyIndividual.h">
+      <Filter>Файлы заголовков\safety</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\safety\SafetyIndividualAck.h">
+      <Filter>Файлы заголовков\safety</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\routine\RoutineGroup.h">
+      <Filter>Файлы заголовков\routine</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\routine\RoutineIndividual.h">
+      <Filter>Файлы заголовков\routine</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\routine\RoutineIndividualAck.h">
+      <Filter>Файлы заголовков\routine</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\AbstractDistressRelay.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\Distress.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\DistressAck.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\DistressRelay.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\DistressRelayAck.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\distress\DistressRelayRq.h">
+      <Filter>Файлы заголовков\distress</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\AllShipsDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\BitDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\CodesDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\DecoderListener.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\DistressDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\DscDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\GeographicAreaDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\IndividualDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\RoutineGroupDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="include_internal\decoder\SemiAutoDecoder.h">
+      <Filter>Файлы заголовков\decoder</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
