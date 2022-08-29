@@ -1,5 +1,6 @@
 #include <string>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/FormatSpecifier.h"
 
@@ -35,8 +36,8 @@ FormatSpecifier FormatSpecifier::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find format specified for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find format specified for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return FormatSpecifier(Code(FormatSpecifier::Symbol_INDIVIDUAL));
 }
@@ -59,8 +60,8 @@ std::string FormatSpecifier::toString()
 	case FormatSpecifier::Symbol_IDIVIDUAL_SEMI_AUTOMATIC:
 		return "Individual station semi-automatic/automatic service";
 	default:
-		printf("FormatSpecifier %d is invalid\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("FormatSpecifier %d is invalid\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

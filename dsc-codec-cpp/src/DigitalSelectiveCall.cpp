@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 
+#include "common.h"
 #include "structure/FormatSpecifier.h"
 #include "structure/Phasing.h"
 #include "entities/Mmsi.h"
@@ -11,8 +12,8 @@ DigitalSelectiveCall::DigitalSelectiveCall(FormatSpecifier formatSpecifier,
 	Phasing eos, Mmsi selfId)
 {
 	if (!Phasing::isEOS(eos)) {
-		printf("Expected symbol of the end of the sequence. Received: %s\n", eos.toString().c_str());
-		abort();
+		DSCD_PRINTF("Expected symbol of the end of the sequence. Received: %s\n", eos.toString().c_str());
+		DSCD_ABORT();
 	}
 
 	this->formatSpecifier = formatSpecifier;
@@ -68,7 +69,11 @@ char *DigitalSelectiveCall::encode(int *size)
 
 	std::vector<Code> codes = toCodes();
 
-	for (Code cd : codes) printf("%d ", cd.getSymbol());
+#ifdef DSCD_PRINT_ENCODED_SYMBOLS
+	DSCD_PRINTF("\nRaw encode: ");
+	for (Code cd : codes) DSCD_PRINTF("%d ", cd.getSymbol());
+	DSCD_PRINTF("\n");
+#endif
 
 	for (Code s : codes) {
 		dxSeq.push_back(s);

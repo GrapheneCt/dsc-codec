@@ -1,5 +1,6 @@
 #include <vector>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "entities/Coordinates.h"
 #include "entities/TimeUTC.h"
@@ -89,8 +90,8 @@ DigitalSelectiveCall *GeographicAreaDecoder::decodeDistressRelay(Mmsi selfId, Ar
 			return new DistressRelayAck(allShipsSpec, selfId, distressMmsi,
 				nature, coordinates, time, subsequentTelecommunications, expPos);
 		default:
-			printf("Unknown EOS! %d\n", eos.getCode().getSymbol());
-			abort();
+			DSCD_PRINTF("Unknown EOS! %d\n", eos.getCode().getSymbol());
+			DSCD_ABORT();
 			break;
 		}
 	}
@@ -106,8 +107,8 @@ DigitalSelectiveCall *GeographicAreaDecoder::decodeDistressRelay(Mmsi selfId, Ar
 		return new DistressRelayAck(allShipsSpec, selfId, distressMmsi,
 			nature, coordinates, time, subsequentTelecommunications);
 	default:
-		printf("Unknown EOS! %d\n", eos.getCode().getSymbol());
-		abort();
+		DSCD_PRINTF("Unknown EOS! %d\n", eos.getCode().getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

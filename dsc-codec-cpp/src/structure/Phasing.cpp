@@ -1,6 +1,7 @@
 #include <cstddef>
 #include <vector>
 
+#include "common.h"
 #include "structure/Phasing.h"
 
 bool Phasing::isEOS(Phasing p)
@@ -43,8 +44,8 @@ Phasing Phasing::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find phasing for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find phasing for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return Phasing(Code(Phasing::Symbol_EOS));
 }
@@ -92,8 +93,8 @@ std::string Phasing::toString()
 	case Phasing::Symbol_EOS:
 		return "EOS";
 	default:
-		printf("Phasing %d is invalid\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("Phasing %d is invalid\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

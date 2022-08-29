@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 
+#include "common.h"
 #include "entities/Frequency.h"
 #include "entities/Coordinates.h"
 #include "entities/Mmsi.h"
@@ -30,8 +31,8 @@ Distress::Distress(Mmsi selfId, DistressNature nature,
 		this->hasExpansionPosition = false;
 	}
 	else {
-		printf("Неверно указан последующий тип связи! Указан: %d\n", subsequentCommunicationSymbol);
-		abort();
+		DSCD_PRINTF("Unknown subsequent communication type: %d\n", subsequentCommunicationSymbol);
+		DSCD_ABORT();
 	}
 }
 
@@ -56,8 +57,8 @@ Distress::Distress(Mmsi selfId, DistressNature nature,
 		this->hasExpansionPosition = true;
 	}
 	else {
-		printf("Неверно указан последующий тип связи! Указан: %d\n", subsequentCommunicationSymbol);
-		abort();
+		DSCD_PRINTF("Unknown subsequent communication type: %d\n", subsequentCommunicationSymbol);
+		DSCD_ABORT();
 	}
 }
 

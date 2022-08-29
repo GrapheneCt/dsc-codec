@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "decoder/CodesDecoder.h"
 #include "decoder/DecoderListener.h"
@@ -61,11 +62,11 @@ void DscDecoder::decodeCodes(std::vector<Code> codes)
 	Code formatSpecifier = codes[0];
 
 	if (!CodesDecoder::isEccCorrect(codes))
-		printf("Incorrect ECC!\n");
+		DSCD_PRINTF("Incorrect ECC!\n");
 
 	if (CodesDecoder::isExpanded(codes) &&
 		!CodesDecoder::isExpandEccCorrect(codes)) {
-		printf("Incorrect ECC of expanded sequence!\n");
+		DSCD_PRINTF("Incorrect ECC of expanded sequence!\n");
 	}
 
 	int optIdx = -1;
@@ -81,8 +82,10 @@ void DscDecoder::decodeCodes(std::vector<Code> codes)
 		CodesDecoder *decoderOpt = codesDecoders[optIdx];
 		DigitalSelectiveCall *dsc = decoderOpt->decodeCodes(codes);
 
+#ifdef DSCD_PRINT_DECODED_MESSAGE
 		std::string str("Decoded DSC: " + dsc->toString() + "\n");
-		printf(str.c_str());
+		DSCD_PRINTF(str.c_str());
+#endif
 
 		for (int i = 0; i < listeners.size(); i++) {
 			listeners[i]->onIncomeDsc(dsc);
@@ -91,8 +94,8 @@ void DscDecoder::decodeCodes(std::vector<Code> codes)
 		delete dsc;
 	}
 	else {
-		printf("Failed to find appropriate decoder for this format speicifactor %d!\n", formatSpecifier.getSymbol());
-		abort();
+		DSCD_PRINTF("Failed to find appropriate decoder for this format speicifactor %d!\n", formatSpecifier.getSymbol());
+		DSCD_ABORT();
 	}
 }
 

@@ -1,5 +1,6 @@
 #include <vector>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "entities/Coordinates.h"
 #include "entities/TimeUTC.h"
@@ -72,8 +73,8 @@ DigitalSelectiveCall *IndividualDecoder::decodeDistressRelay(std::vector<Code> c
 			return new DistressRelayAck(allShipsSpec, selfId, distressMmsi,
 				nature, coordinates, time, subsequentTelecommunications, expPos);
 		default:
-			printf("Unknown EOS! %d\n", eos.getCode().getSymbol());
-			abort();
+			DSCD_PRINTF("Unknown EOS! %d\n", eos.getCode().getSymbol());
+			DSCD_ABORT();
 			break;
 		}
 	}
@@ -89,8 +90,8 @@ DigitalSelectiveCall *IndividualDecoder::decodeDistressRelay(std::vector<Code> c
 		return new DistressRelayAck(allShipsSpec, selfId, distressMmsi,
 			nature, coordinates, time, subsequentTelecommunications);
 	default:
-		printf("Unknown EOS! %d\n", eos.getCode().getSymbol());
-		abort();
+		DSCD_PRINTF("Unknown EOS! %d\n", eos.getCode().getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 
@@ -190,8 +191,8 @@ DigitalSelectiveCall *IndividualDecoder::decodeUrgOrSafety(std::vector<Code> cod
 			return new SafetyIndividualAck(selfId, address, ft, st, freqRx, freqTx, pos, time);
 		}
 	default:
-		printf("Unknown category %d\n", cat.getCode().getSymbol());
-		abort();
+		DSCD_PRINTF("Unknown category %d\n", cat.getCode().getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 }

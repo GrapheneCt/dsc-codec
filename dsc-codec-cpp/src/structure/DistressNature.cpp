@@ -1,3 +1,4 @@
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/DistressNature.h"
 
@@ -36,8 +37,8 @@ DistressNature DistressNature::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find distress nature for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find distress nature for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return DistressNature(Code(DistressNature::Symbol_UNDESIGNATED));
 }
@@ -58,8 +59,8 @@ std::string DistressNature::toString()
 	case DistressNature::Symbol_MAN_OVERBOARD: return "Man overboard";
 	case DistressNature::Symbol_EPIRB_EMISSION: return "EPIRB emission";
 	default:
-		printf("Distress %d is invalid\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("Distress %d is invalid\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

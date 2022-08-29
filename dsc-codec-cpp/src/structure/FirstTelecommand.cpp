@@ -1,5 +1,6 @@
 #include <string>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/FirstTelecommand.h"
 
@@ -37,8 +38,8 @@ FirstTelecommand FirstTelecommand::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find first telecommand for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find first telecommand for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return FirstTelecommand(Code(FirstTelecommand::Symbol_NO_INFO));
 }
@@ -75,8 +76,8 @@ std::string FirstTelecommand::toString()
 	case FirstTelecommand::Symbol_NO_INFO:
 		return "No information";
 	default:
-		printf("FirstTelecommand %d is invalid\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("FirstTelecommand %d is invalid\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

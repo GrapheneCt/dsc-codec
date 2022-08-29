@@ -1,5 +1,6 @@
 #include <string>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/SecondTelecommand.h"
 
@@ -39,8 +40,8 @@ SecondTelecommand SecondTelecommand::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find second telecommand for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find second telecommand for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return SecondTelecommand(Code(SecondTelecommand::Symbol_NO_INFO));
 }
@@ -79,8 +80,8 @@ std::string SecondTelecommand::toString()
 	case SecondTelecommand::Symbol_NO_INFO:
 		return "No information";
 	default:
-		printf("SecondTelecommand %d is invalid\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("SecondTelecommand %d is invalid\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

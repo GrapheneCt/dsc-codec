@@ -1,3 +1,4 @@
+#include "common.h"
 #include "entities/Transmittable.h"
 #include "entities/Coordinates.h"
 
@@ -13,8 +14,8 @@ Quadrant Quadrant::fromString(std::string s)
 		return Quadrant(Quadrant::Symbol_SW);
 	else
 	{
-		printf("Квадранта %s не существует!\n", s.c_str());
-		abort();
+		DSCD_PRINTF("Unknown quadrant: %s\n", s.c_str());
+		DSCD_ABORT();
 	}
 
 	return Quadrant(Quadrant::Symbol_NW);
@@ -57,8 +58,8 @@ std::string Quadrant::toString()
 	case 2: return "SE";
 	case 3: return "SW";
 	default:
-		printf("Квадранта с кодом %d не существует!\n", code);
-		abort();
+		DSCD_PRINTF("Unknown quadrant: %d\n", code);
+		DSCD_ABORT();
 		break;
 	}
 
@@ -88,8 +89,8 @@ Coordinates::Coordinates(std::string ilongitude, std::string ilatitude, Quadrant
 	}
 	else
 	{
-		printf("Долгота(longitude) должна состоять из 5 цифр, а широта(latitude) из 4!\n");
-		abort();
+		DSCD_PRINTF("Longitude must contain 5 numbers, latitude must contain 4 numbers\n");
+		DSCD_ABORT();
 	}
 }
 
@@ -102,8 +103,8 @@ Coordinates::Coordinates(std::string ilongitude, std::string ilatitude)
 	}
 	else
 	{
-		printf("Долгота(longitude) должна состоять из 5 цифр, а широта(latitude) из 4!\n");
-		abort();
+		DSCD_PRINTF("Долгота(longitude) должна состоять из 5 цифр, а широта(latitude) из 4!\n");
+		DSCD_ABORT();
 	}
 }
 
@@ -179,8 +180,8 @@ Coordinates Coordinates::fromCodes(std::vector<Code> codes)
 	if (codes.size() == 5) return fromCodes5(codes);
 	else if (codes.size() == 3) return fromCodes3(codes);
 	else {
-		printf("Количество символов для декодирования должно быть 3 или 5. Получено: %d\n", codes.size());
-		abort();
+		DSCD_PRINTF("Coordinates symbol count must be 3 or 5. Recieved: %d\n", codes.size());
+		DSCD_ABORT();
 	}
 
 	return Coordinates("99999", "9999", Quadrant(Quadrant::Symbol_NE));

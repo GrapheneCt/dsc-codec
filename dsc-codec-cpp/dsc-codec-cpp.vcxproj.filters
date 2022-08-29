@@ -386,5 +386,8 @@
     <ClInclude Include="include_internal\decoder\SemiAutoDecoder.h">
       <Filter>Файлы заголовков\decoder</Filter>
     </ClInclude>
+    <ClInclude Include="include_internal\Common.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

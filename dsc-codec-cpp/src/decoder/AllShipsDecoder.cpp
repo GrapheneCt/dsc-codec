@@ -1,6 +1,7 @@
 #include <vector>
 #include <string>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "entities/Coordinates.h"
 #include "entities/TimeUTC.h"
@@ -43,8 +44,8 @@ DigitalSelectiveCall *AllShipsDecoder::decodeDistress(std::vector<Code> codes)
 	else if (symbol == FirstTelecommand::Symbol_DISTRESS_RELAY)
 		return decodeDistressRelay(codes);
 
-	printf("Invalid first telecommand!\n");
-	abort();
+	DSCD_PRINTF("Invalid first telecommand: %d\n", symbol);
+	DSCD_ABORT();
 
 	return decodeDistressRelay(codes);
 }
@@ -94,8 +95,8 @@ DigitalSelectiveCall *AllShipsDecoder::decodeDistressRelay(std::vector<Code> cod
 				selfId, distressMmsi, nature, coordinates, time, subsequentTelecommunications);
 		}
 	default:
-		printf("Unknown EOS! %d\n", eos.getCode().getSymbol());
-		abort();
+		DSCD_PRINTF("Unknown EOS! %d\n", eos.getCode().getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

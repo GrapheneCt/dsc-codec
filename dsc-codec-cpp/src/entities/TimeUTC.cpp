@@ -4,6 +4,7 @@
 #include <sstream>
 #include <time.h>
 
+#include "common.h"
 #include "entities/Transmittable.h"
 #include "entities/TimeUTC.h"
 
@@ -47,8 +48,8 @@ std::vector<Code> TimeUTC::toCodes()
 TimeUTC TimeUTC::fromCodes(std::vector<Code> codes)
 {
 	if (codes.size() < 2) {
-		printf("Для декодирования времени необходимо 2 символа. Получено: %d\n" + codes.size());
-		abort();
+		DSCD_PRINTF("TimeUTC requires 2 symbols. Recieved: %d\n" + codes.size());
+		DSCD_ABORT();
 	}
 
 	int hour = codes[0].getSymbol();

@@ -1,3 +1,4 @@
+#include "common.h"
 #include "entities/Transmittable.h"
 #include "entities/PstnNumber.h"
 
@@ -9,8 +10,8 @@ PstnNumber::PstnNumber()
 PstnNumber::PstnNumber(std::string number)
 {
 	if (!checkFormat(number)) {
-		printf("PSTN номер должен состоять из цифр! Передано: %s с размером %d\n", number.c_str(), number.length());
-		abort();
+		DSCD_PRINTF("PSTN must contain numbers. TX: %s with size of %d\n", number.c_str(), number.length());
+		DSCD_ABORT();
 	}
 
 	this->number = number;
@@ -19,7 +20,7 @@ PstnNumber::PstnNumber(std::string number)
 PstnNumber PstnNumber::fromCodes(std::vector<Code> codes)
 {
 	//std::string number = codes.stream().reduce("", (c1, c2)->c1 + c2.getSymbol(), (c1, c2)->c1 + c2);
-	printf("Функция PstnNumber::fromCodes() не реализована. Будет возвращен нулевой PSTN\n");
+	DSCD_PRINTF("PstnNumber::fromCodes() is not implemented. PSTN will be set to 0\n");
 
 	return PstnNumber("0000000000000000");
 }
@@ -45,7 +46,7 @@ std::vector<Code> PstnNumber::toCodes()
 	}
 	*/
 
-	printf("Функция PstnNumber::toCodes() не реализована. Будет возвращен нулевой PSTN\n");
+	DSCD_PRINTF("PstnNumber::toCodes() is not implemented. PSTN will be set to 0\n");
 
 	for (int i = 0; i < 8; i++)
 	{

@@ -218,6 +218,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include_internal\AllShipsCall.h" />
+    <ClInclude Include="include_internal\Common.h" />
     <ClInclude Include="include_internal\decoder\AllShipsDecoder.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>

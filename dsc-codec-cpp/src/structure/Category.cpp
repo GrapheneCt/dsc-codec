@@ -1,3 +1,4 @@
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/Category.h"
 
@@ -26,8 +27,8 @@ Category Category::fromSymbol(int symbol)
 		}
 	}
 
-	printf("Failed to find phasing for specified symbol: %d\n", symbol);
-	abort();
+	DSCD_PRINTF("Failed to find phasing for specified symbol: %d\n", symbol);
+	DSCD_ABORT();
 
 	return Category(Code(Category::Symbol_ROUTINE));
 }
@@ -40,8 +41,8 @@ std::string Category::toString()
 	case Category::Symbol_URGENCY: return "Urgency";
 	case Category::Symbol_DISTRESS: return "Distress";
 	default:
-		printf("Категории %d не существует\n", code.getSymbol());
-		abort();
+		DSCD_PRINTF("Unknown category: %d\n", code.getSymbol());
+		DSCD_ABORT();
 		break;
 	}
 

@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 
+#include "common.h"
 #include "entities/Code.h"
 #include "structure/Phasing.h"
 #include "DigitalSelectiveCall.h"
@@ -179,7 +180,9 @@ int BitDecoder::decodeBytes(char *bytes, int length)
 		decodedSymbols += str;
 	}
 
-	printf("Decoded symbols: %s\n", decodedSymbols.c_str());
+#ifdef DSCD_PRINT_DECODED_SYMBOLS
+	DSCD_PRINTF("Decoded symbols: %s\n", decodedSymbols.c_str());
+#endif
 
 	DscDecoder *dscDec = (DscDecoder *)codeDecoder;
 	dscDec->decodeCodes(message);
