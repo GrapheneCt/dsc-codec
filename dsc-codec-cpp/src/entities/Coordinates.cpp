@@ -170,7 +170,7 @@ std::vector<Code> Coordinates::toCodes()
 Coordinates Coordinates::fromCodes(std::vector<Code> codes)
 {
 	int quadrantCode = codes[0].getSymbol() / 10;
-	bool quadrantExists = (quadrantCode > 0 && quadrantCode < 3);
+	bool quadrantExists = (quadrantCode >= 0 && quadrantCode <= 3);
 
 	//  оординаты по умолчанию (не определены)
 	if (!quadrantExists)

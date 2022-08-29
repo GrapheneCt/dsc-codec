@@ -290,7 +290,7 @@ int main()
 	Distress *distress = new Distress(
 		Mmsi(123456789),
 		DistressNature(DistressNature::Symbol_COLLISION),
-		Coordinates("12345", "4321"),
+		Coordinates("12345", "4321", Quadrant(Quadrant::Symbol_SW)),
 		TimeUTC(),
 		FirstTelecommand(FirstTelecommand::Symbol_F1B_J2B_TTY_FEC)
 	);
